@@ -1,72 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Interactive Search</title>
-    <style>
-        /* Basic styling */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
+  <title>Enter Metaverse</title>
+  <script>
+    function enterMetaverse() {
+      // Get the paragraph by ID
+      const statusPara = document.getElementById("status");
 
-        .search {
-            display: flex;
-            align-items: center;
-            border: 2px solid #ccc;
-            border-radius: 30px;
-            padding: 5px 10px;
-            transition: all 0.3s ease;
-        }
-
-        .search input.input {
-            border: none;
-            outline: none;
-            padding: 8px;
-            width: 0;
-            transition: width 0.3s ease;
-        }
-
-        .search button.btn {
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        /* When active, expand the input */
-        .search.active input.input {
-            width: 200px;
-        }
-
-        .search.active {
-            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-        }
-    </style>
+      // Update content to an <h1> with the new message
+      statusPara.innerHTML = "<h1>Entered Metaverse</h1>";
+    }
+  </script>
 </head>
 <body>
 
-<div class="search">
-    <input type="text" class="input" placeholder="Search...">
-    <button class="btn">🔍</button>
-</div>
+  <!-- Initial Paragraph -->
+  <p id="status">Enter the Metaverse</p>
 
-<script>
-    const search = document.querySelector('.search');
-    const input = document.querySelector('.input');
-    const btn = document.querySelector('.btn');
-
-    btn.addEventListener('click', () => {
-        search.classList.add('active');
-        input.focus();
-    });
-</script>
+  <!-- Button -->
+  <button id="enterBtn" onclick="enterMetaverse()">Enter</button>
 
 </body>
 </html>
